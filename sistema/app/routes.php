@@ -10,5 +10,16 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', 'HomeController@home');
+Route::controller('users', 'UsersController');
 
-Route::get('/','TestsController@test1');
+
+/*
+
+//LOGIN
+Route::get('login', array('as' => 'login', function () { 
+	return View::make('login');
+}))->before('guest');;
+Route::post('login', 'SessionController@login');
+Route::get('logout', array('as' => 'logout', function () { return View::make('profile'); }))->before('auth');
+Route::get('profile', array('as' => 'profile', function () { }))->before('auth');*/
